@@ -29,10 +29,10 @@
   </build>
 
   <scm>
-    <connection>scm:git:https://github.com/negod/JEE-Generics-Parent.git/service-parent</connection>
-    <developerConnection>scm:git:https://github.com/negod/JEE-Generics-Parent.git/service-parent</developerConnection>
+    <connection>scm:git:https://github.com/negod/JEE-Service-Archetype.git</connection>
+    <developerConnection>scm:git:https://github.com/negod/JEE-Service-Archetype.git</developerConnection>
     <tag>parent-1.6</tag>
-    <url>scm:git:https://github.com/negod/JEE-Generics-Parent.git/service-parent</url>
+    <url>scm:git:https://github.com/negod/JEE-Service-Archetype.git</url>
   </scm>
 
   <distributionManagement>
