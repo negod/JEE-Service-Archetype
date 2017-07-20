@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>se.backede.archetype</groupId>
-  <artifactId>service-parent-archetype</artifactId>
-  <version>1.0</version>
+  <artifactId>service-archetype</artifactId>
+  <version>1.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>service-parent-archetype</name>
+  <name>service-archetype</name>
 
   <build>
     <extensions>
@@ -29,10 +29,10 @@
   </build>
 
   <scm>
-    <connection>scm:git:https://github.com/negod/JEE-Service-Archetype.git</connection>
-    <developerConnection>scm:git:https://github.com/negod/JEE-Service-Archetype.git</developerConnection>
-    <tag>service-parent-archetype-1.0</tag>
-    <url>scm:git:https://github.com/negod/JEE-Service-Archetype.git</url>
+    <connection>scm:git:https://github.com/negod/JEE-Generics-Parent.git/service-parent</connection>
+    <developerConnection>scm:git:https://github.com/negod/JEE-Generics-Parent.git/service-parent</developerConnection>
+    <tag>parent-1.6</tag>
+    <url>scm:git:https://github.com/negod/JEE-Generics-Parent.git/service-parent</url>
   </scm>
 
   <distributionManagement>
