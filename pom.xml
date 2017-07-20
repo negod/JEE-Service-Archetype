@@ -4,7 +4,7 @@
 
   <groupId>se.backede.archetype</groupId>
   <artifactId>service-archetype</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>service-archetype</name>
@@ -36,7 +36,7 @@
   <scm>
     <connection>scm:git:https://github.com/negod/JEE-Service-Archetype.git</connection>
     <developerConnection>scm:git:https://github.com/negod/JEE-Service-Archetype.git</developerConnection>
-    <tag>service-archetype-1.0</tag>
+    <tag>HEAD</tag>
     <url>scm:git:https://github.com/negod/JEE-Service-Archetype.git</url>
   </scm>
 
