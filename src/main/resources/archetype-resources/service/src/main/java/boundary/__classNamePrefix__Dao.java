@@ -9,6 +9,9 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import ${package}.entity.${classNamePrefix}Entity;
 
 /**
@@ -17,12 +20,19 @@ import ${package}.entity.${classNamePrefix}Entity;
  */
 @LocalBean
 @Stateless
+@Slf4j
 public class ${classNamePrefix}Dao extends GenericDao<${classNamePrefix}Entity> {
 
-    Logger log = LoggerFactory.getLogger(${classNamePrefix}Dao.class);
+    @PersistenceContext(unitName = "${classNamePrefix}PU")
+    private EntityManager em;
 
     public ${classNamePrefix}Dao() throws DaoException {
         super(${classNamePrefix}Entity.class);
+    }
+
+    @Override
+    public EntityManager getEntityManager() {
+        return em;
     }
 
 }

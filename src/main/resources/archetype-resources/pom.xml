@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>se.backede</groupId>
-        <artifactId>parent</artifactId>
-        <version>1.6</version>
+        <groupId>se.backede.parent</groupId>
+        <artifactId>webservice-parent</artifactId>
+        <version>1.0</version>
     </parent>
 
     <groupId>${groupId}</groupId>
@@ -13,7 +13,7 @@
     <version>${version}</version>
     <packaging>pom</packaging>
     
-    <name>service parent</name>
+    <name>${rootArtifactId} service</name>
     
     <!-- to initialize project: mvn -Dinit=mysql -->
     

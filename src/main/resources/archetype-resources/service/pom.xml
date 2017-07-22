@@ -51,20 +51,25 @@
         <hibernate.transaction.jta.platform>org.hibernate.service.jta.platform.internal.SunOneJtaPlatform</hibernate.transaction.jta.platform>
         <hibernate.dialect>org.hibernate.dialect.DerbyDialect</hibernate.dialect>
         
+        <!-- Backede libs -->
+        <persistence.version>1.2</persistence.version>
+        <webservice.version>1.1</webservice.version>
+        
     </properties>
     
     <dependencies>
         
         <!-- Commons -->
+        <!-- Commons -->
         <dependency>
             <groupId>se.backede.generics</groupId>
             <artifactId>persistence</artifactId>
-            <version>1.1</version>
+            <version>${persistence.version}</version>
         </dependency>
         <dependency>
             <groupId>se.backede.generics</groupId>
             <artifactId>webservice</artifactId>
-            <version>1.1</version>
+            <version>${webservice.version}</version>
         </dependency>
         
         <!-- JPA provider -->
