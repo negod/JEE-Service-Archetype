@@ -1,0 +1,25 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+
+<${artifactId}ChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <!-- tables -->
+    <include file="${symbol_escape}schema${symbol_escape}tables${symbol_escape}domain.xml"/>
+    <include file="${symbol_escape}schema${symbol_escape}tables${symbol_escape}${rootArtifactId}.xml"/>
+    <include file="${symbol_escape}schema${symbol_escape}tables${symbol_escape}user.xml"/>
+    <include file="${symbol_escape}schema${symbol_escape}tables${symbol_escape}${rootArtifactId}_detail.xml"/>
+    <include file="${symbol_escape}schema${symbol_escape}tables${symbol_escape}${rootArtifactId}_user.xml"/>
+    
+    <!-- Initdata -->
+    <include file="${symbol_escape}schema${symbol_escape}initdata${symbol_escape}domain_init.xml"/>
+    <include file="${symbol_escape}schema${symbol_escape}initdata${symbol_escape}${rootArtifactId}_init.xml"/>
+    <include file="${symbol_escape}schema${symbol_escape}initdata${symbol_escape}user_init.xml"/>
+    <include file="${symbol_escape}schema${symbol_escape}initdata${symbol_escape}${rootArtifactId}_detail_init.xml"/>
+    <include file="${symbol_escape}schema${symbol_escape}initdata${symbol_escape}${rootArtifactId}_user_init.xml"/>
+	
+</${artifactId}ChangeLog>

@@ -1,0 +1,56 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns:xi="http://www.w3.org/2001/XInclude"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" 
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext 
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+                        http://www.liquibase.org/xml/ns/dbchangelog 
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet author="authorName" id="Create ${rootArtifactId}_user Table">
+
+        <createTable tableName="${rootArtifactId}_user" remarks="Table handling ${rootArtifactId} users" >
+            <column name="internalId" type="bigint" autoIncrement="true">
+                <constraints nullable="false" unique="true"/>
+            </column>            
+            <column name="updatedDate" type="timestamp" defaultValueComputed="CURRENT_TIMESTAMP" remarks="Last updated date time.">
+                <constraints nullable="false"/>
+            </column>
+            <column name="${rootArtifactId}_id" type="varchar(36)" remarks="Reference to ${rootArtifactId}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="${rootArtifactId}id_userid_pk"/>
+            </column>
+            <column name="user_id" type="varchar(36)" remarks="Reference to User">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="${rootArtifactId}id_userid_pk"/>
+            </column>
+            
+        </createTable>
+        
+        <!-- ManyToMany example -->
+        <addForeignKeyConstraint baseColumnNames="${rootArtifactId}_id"
+                                 baseTableName="${rootArtifactId}_user"
+                                 constraintName="${rootArtifactId}user_user_fk"                                 
+                                 referencedColumnNames="id"
+                                 referencedTableName="${rootArtifactId}"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"/>
+        
+        <!-- ManyToMany example -->
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="${rootArtifactId}_user"
+                                 constraintName="${rootArtifactId}user_${rootArtifactId}_fk"                                 
+                                 referencedColumnNames="id"
+                                 referencedTableName="user"
+                                 onDelete="CASCADE"
+                                 onUpdate="RESTRICT"/>
+
+        <rollback>
+            <dropTable tableName="${rootArtifactId}_user" cascadeConstraints="true" />
+        </rollback>
+        
+    </changeSet>
+
+</databaseChangeLog>
