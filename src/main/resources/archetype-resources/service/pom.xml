@@ -346,6 +346,9 @@
     </profiles>
 
     <build>
+	
+		 <finalName>${project.parent.artifactId}-${project.parent.version}</finalName>
+	
         <plugins>
             
             <!-- WAR PLUGIN -->
