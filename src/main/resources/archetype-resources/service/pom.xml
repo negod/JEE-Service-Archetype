@@ -261,7 +261,7 @@
                     </plugin>
                 </plugins>
             </build>
-      
+       </profile>
         
         <!-- GENERATE SWAGGER REST API DOCUMENTATION -->
         <!-- mvn clean install -Pgenerate-swagger -Dswagger.hostname=localhost -Dswagger.port=8080 -->
